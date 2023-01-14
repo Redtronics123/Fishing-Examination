@@ -1,4 +1,5 @@
 import cmd
+from office import document
 
 
 class Cli(cmd.Cmd):
@@ -10,3 +11,7 @@ class Cli(cmd.Cmd):
     @staticmethod
     def do_exit(args: str):
         exit()
+
+    @staticmethod
+    def do_exam(date: str):
+        document.Doc(date=date).create()
